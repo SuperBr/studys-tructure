@@ -18,6 +18,8 @@ public class Node<T, V> extends Entry<T,V> {
 
     public Node right;
 
+    public Node parent;
+
     public Boolean hasLeft() {
         return left!=null;
     }
