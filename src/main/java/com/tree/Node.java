@@ -10,9 +10,16 @@ public class Node<T, V> extends Entry<T,V> {
         super(key, value);
     }
 
+    public Node(T key, V value, Integer height) {
+        super(key, value);
+        this.height = height;
+    }
+
     public Node() {
         super(null, null);
     }
+
+    public Integer height;
 
     public Node left;
 
@@ -30,7 +37,7 @@ public class Node<T, V> extends Entry<T,V> {
 
 }
 
-class Entry<K, V> {
+ class Entry<K, V> {
 
     public Entry(K key, V value) {
         this.key = key;
