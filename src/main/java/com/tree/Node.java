@@ -19,13 +19,13 @@ public class Node<T, V> extends Entry<T,V> {
         super(null, null);
     }
 
-    public Integer height;
+    private Integer height;
 
-    public Node left;
+    public Node<T, V> left;
 
-    public Node right;
+    public Node<T, V> right;
 
-    public Node parent;
+    public Node<T, V> parent;
 
     public Boolean hasLeft() {
         return left!=null;
@@ -35,6 +35,17 @@ public class Node<T, V> extends Entry<T,V> {
         return right!=null;
     }
 
+    public Integer getHeight() {
+        if (height == null) {
+            return 0;
+        }
+        return height;
+    }
+
+    public Node setHeight(Integer height) {
+        this.height = height;
+        return this;
+    }
 }
 
  class Entry<K, V> {
